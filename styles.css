@@ -49,22 +49,20 @@ body {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
 }
 
-/* --- إعدادات العلامة المائية (فوق المحتوى) --- */
+/* --- تنسيق العلامة المائية الجديدة (فوق الأسئلة والمربعات) --- */
 .watermark {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75%;
-    height: 75%;
-    background: url('1.jpg') no-repeat center center;
-    background-size: contain;
-    opacity: 0.25; /* شفافية بنسبة 75% لكي تظهر الأسئلة والنصوص من تحت الشعار بوضوح */
-    pointer-events: none; /* خاصية جوهرية تجعل الماوس يمر عبر الشعار للضغط على الأزرار والأسئلة */
-    z-index: 99; /* تم رفع القيمة هنا لتصبح الطبقة فوق الأسئلة والمربعات تماماً وليس خلفها */
+    width: 80%; /* التحكم في عرض الشعار داخل المربع */
+    max-height: 80%;
+    object-fit: contain; /* للحفاظ على أبعاد الشعار دون تشويه */
+    opacity: 0.10; /* شفافية بنسبة 75% لراحة العين أثناء قراءة الأسئلة */
+    pointer-events: none; /* لتمرير نقرات الماوس من خلال الصورة إلى الأزرار والأسئلة */
+    z-index: 99; /* جعلها في الطبقة العلوية فوق الأسئلة تماماً */
 }
 
-/* طبقة الشاشات الأساسية تحت العلامة المائية */
 #login-screen, #quiz-screen, #result-screen {
     position: relative;
     z-index: 1;
