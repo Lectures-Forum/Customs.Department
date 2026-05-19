@@ -28,7 +28,7 @@
             </div>
             
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <div class="timer-info" style="margin-bottom: 0;">السؤال <span id="currentNum">1</span> من <span id="totalNum"></span></div>
+                <div class="timer-info" id="q-counter" style="margin-bottom: 0;"></div>
                 <button class="q-map-toggle" onclick="toggleMap()">📍 خريطة الأسئلة</button>
             </div>
             <div id="q-map-container"></div>
@@ -45,6 +45,7 @@
             <div id="resIcon" class="result-icon"></div>
             <h1 id="resHeader"></h1>
             <div id="scoreDisplay" class="score-display"></div>
+            <div id="detailedScores"></div>
             <div id="timeSummary" class="time-summary"></div>
             <p id="statusMsg" style="font-weight: 600; color: var(--primary-color); display: none;"></p>
 
